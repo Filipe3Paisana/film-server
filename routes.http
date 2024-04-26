@@ -1,0 +1,40 @@
+POST http://localhost:5555/videos
+Content-Type: application/json
+
+{
+    "title": "Bob Marley8",
+    "description": "Four love...",
+    "duration": 140
+
+}
+###
+GET http://localhost:5555/videos
+
+###
+
+
+PUT http://localhost:5555/videos/29f90cf3-3402-49b5-b6ad-17ba1efc24c9
+Content-Type: application/json
+
+{
+    "title": "Bob Marley Tree",
+    "description": "Tree love...",
+    "duration": 142
+
+}
+###
+
+
+DELETE http://localhost:5555/videos/29f90cf3-3402-49b5-b6ad-17ba1efc24c9
+
+{
+
+    
+
+}
+
+###
+
+GET http://localhost:5555/videos/soma_duracao
+
+###
