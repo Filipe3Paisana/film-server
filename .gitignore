@@ -5,8 +5,7 @@ dist/
 # Ignore dependency directories
 node_modules/
 vendor/
-database-memory.js
-teste.js
+
 
 # Ignore log files
 *.log
@@ -33,3 +32,7 @@ yarn.lock
 
 # Ignore macOS system files
 .DS_Store
+
+
+*database-memory.js
+*teste.js
