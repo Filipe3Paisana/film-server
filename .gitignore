@@ -33,6 +33,5 @@ yarn.lock
 # Ignore macOS system files
 .DS_Store
 
-
-*database-memory.js
-*teste.js
+/database-memory.js
+/teste.js
