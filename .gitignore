@@ -5,8 +5,8 @@ dist/
 # Ignore dependency directories
 node_modules/
 vendor/
-database-memory/
-teste/
+database-memory.js
+teste.js
 
 # Ignore log files
 *.log
