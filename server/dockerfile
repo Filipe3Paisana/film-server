@@ -1,0 +1,18 @@
+# Escolha a imagem base
+FROM node:14
+
+# Defina o diretório de trabalho no container
+WORKDIR /usr/src/app
+
+# Copie os arquivos de pacotes e instale as dependências
+COPY package*.json ./
+RUN npm install
+
+# Copie todos os arquivos do projeto para o diretório de trabalho
+COPY . .
+
+# Expõe a porta que o servidor Fastify utilizará
+EXPOSE 5555
+
+# Comando para executar o servidor quando o container iniciar
+CMD ["node", "server.js"]

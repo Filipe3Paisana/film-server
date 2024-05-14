@@ -4,11 +4,12 @@ import mysql from 'mysql2/promise';
 const server = fastify();
 
 const connection = await mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'MarcinhoBR',
-  password: 'Filipe123'
+    host: 'db',
+    user: 'root',
+    database: 'MarcinhoBR',
+    password: 'Filipe123'
 });
+  
 
 // Enviar um vídeo
 server.post("/videos", async (request, reply) => {

@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_filme_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Filipe123
+      MYSQL_DATABASE: MarcinhoBR
+      MYSQL_USER: root
+      MYSQL_PASSWORD: Filipe123
+    ports:
+      - "3306:3306"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "5555:5555"
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: Filipe123
+      DB_NAME: MarcinhoBR
+
+volumes:
+  db_filme_data:
